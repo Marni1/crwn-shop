@@ -7,6 +7,7 @@ import { SignUpContainer,Title } from "./sign-up-form.styles";
 
 
 
+
 const defaultFormFields={
     displayName: '',
     email:'',
