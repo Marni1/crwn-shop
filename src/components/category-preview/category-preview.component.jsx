@@ -11,7 +11,7 @@ import { selectCategoriesIsLoading } from '../../store/categories/categories.sel
 const CategoryPreview = ({title, products}) => {
 
     const isLoading = useSelector(selectCategoriesIsLoading)
-    console.log(isLoading)
+   
 
   
     return(

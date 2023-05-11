@@ -6,15 +6,19 @@ import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component
 import {ReactComponent as CrwnLogo} from '../../assets/crown.svg'
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { useSelector } from "react-redux";
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { useDispatch } from "react-redux";
+import { signOutStart } from "../../store/user/user.action";
 
 import { NavigationContainer,LogoContainer,NavLink,NavLinks } from "./navigation.styles";
 
 
 const Navigation = () => {
-
+  const dispatch = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
+  const signOutUser = () => {
+    dispatch(signOutStart())
+  }
 
 
 
